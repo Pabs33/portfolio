@@ -1,10 +1,49 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro'
+import LinkedIn from '../icons/LinkedIn.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHub from '../icons/GitHub.astro';
+import Mail from '../icons/Mail.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio de Pablo Martinez Aznar - Performance Tester & Backend Developer"
+		description="">
 	<main>
-		<h1>Portfolio</h1>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<img class="rounded-full w-12 h-12" src="https://media.licdn.com/dms/image/v2/D4D03AQFtv1QzO40inw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726140466250?e=2147483647&v=beta&t=joheRz0b1h1MBhJb-0qfmUxtNnl3XEdq_OHB9KFfZqM" alt="Photo">
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Pablo Martinez Aznar 
+				<a 	href="https://www.linkedin.com/in/pablo-martinez-aznar-b38812198" 
+					target="_blank" 
+					rel="noopener" 
+					class="flex justify-center items-center"
+					>
+						<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				<span>+2 años de experiencia. </span>
+				<span class="text-yellow-200/90">Performance Engineer & Backend Developer</span>. 
+				<span class="text-red-200/90">De Alicante, España</span>. 
+				<span class="opacity-85">Especializado en construir aplicaciones eficientes</span>.
+			</h2>
+
+			<nav class="flex gap-x-2 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/pablo-martinez-aznar-b38812198">
+					<LinkedIn class="w-6 h-6"/>
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/Pabs33">
+					<GitHub class="w-6 h-6"/>
+					GitHub
+				</SocialPill>
+				<SocialPill href="https://www.linkedin.com/in/pablo-martinez-aznar-b38812198">
+					<Mail class="w-6 h-6"/>
+					pablomartinezaznar@gmail.com
+				</SocialPill>
+			</nav>
+		</section>
 	</main>
 </Layout>

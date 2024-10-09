@@ -3,14 +3,19 @@ import ExperienceItems from "./ExperienceItems.astro"
 
 const EXPERIENCE = [
     {
-        date: 'Marzo 2022',
-        title: 'Performance Engineer',
+        date: 'Marzo 2022 - Actualmente',
+        title: 'Performance Engineer - Minsait',
         description: 'Performance Engineer en el Banco Santander'
+    },
+    {
+        date: 'Marzo 2020',
+        title: 'Tecnico de sistemas - Tecnofix Distribución',
+        description: 'Tecnico de sistemas en tecnofix distribución'
     }
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">  
+<ol class="relative border-s border-gray-200 ml-3">  
     {
         EXPERIENCE.map(experience => (
             <li class="mb-10 ms-4">

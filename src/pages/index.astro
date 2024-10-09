@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro'
 import LinkedIn from '../icons/LinkedIn.astro';
 import SocialPill from '../components/SocialPill.astro';
@@ -8,6 +7,7 @@ import GitHub from '../icons/GitHub.astro';
 import Mail from '../icons/Mail.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import Briefcase from '../icons/Briefcase.astro';
 ---
 
 <Layout title="Portfolio de Pablo Martinez Aznar - Performance Tester & Backend Developer"
@@ -41,13 +41,17 @@ import SectionContainer from '../components/SectionContainer.astro';
 					<GitHub class="w-6 h-6"/>
 					GitHub
 				</SocialPill>
-				<SocialPill href="https://www.linkedin.com/in/pablo-martinez-aznar-b38812198">
+				<SocialPill href="mailto:pablomartinezaznar@gmail.com">
 					<Mail class="w-6 h-6"/>
 					pablomartinezaznar@gmail.com
 				</SocialPill>
 			</nav>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7"/>
+				Experiencia Laboral
+			</h2>
 			<Experience />
 		</SectionContainer>
 	</main>

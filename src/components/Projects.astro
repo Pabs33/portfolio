@@ -8,6 +8,7 @@
     import TypeScript from '../icons/TypeScript.astro'
 import Spring from '../icons/Spring.astro'
 import Mongo from '../icons/Mongo.astro'
+import SocialPill from './SocialPill.astro'
 
     const TAGS = {
         TAILWIND: {
@@ -53,8 +54,8 @@ import Mongo from '../icons/Mongo.astro'
     const projects = [
         {
             title: 'Viaparc - App',
-            description: 'Intranet de la hoguera Via Parc Vistahermosa',
-            link: 'https://viaparc.web.app/privateHome',
+            description: 'Intranet de la hoguera Via Parc Vistahermosa. Suite de aplicaciones para la gestion de una comisión de fiestas de Alicante.',
+            link: 'https://viaparc.web.app',
             github: '#',
             image: ViaparcApp,
             tags: [TAGS.HTML, TAGS.CSS, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.TAILWIND, TAGS.SPRING, TAGS.MONGO]
@@ -67,6 +68,13 @@ import Mongo from '../icons/Mongo.astro'
         <article>
             <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{project.title}</h3>
             <p class="text-lg mb-4 text-pretty">{project.description}</p>
+            {project.link && (
+                <nav class="flex gap-4 mt-6 flex-wrap mb-6">
+                    <SocialPill href={project.link}>
+                        Visita la applicacion
+                    </SocialPill>
+                </nav>
+            )}
             <ul class="flex gap-x-2 flex-row mb-2">
                 {
                     project.tags.map(tag => (

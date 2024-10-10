@@ -1,0 +1,85 @@
+---
+
+    import ViaparcApp from '../img/ViaparcApp.webp'
+    import Tailwind from '../icons/Tailwind.astro'
+    import HTML from '../icons/HTML.astro'
+    import CSS from '../icons/CSS.astro'
+    import Angular from '../icons/Angular.astro'
+    import TypeScript from '../icons/TypeScript.astro'
+import Spring from '../icons/Spring.astro'
+import Mongo from '../icons/Mongo.astro'
+
+    const TAGS = {
+        TAILWIND: {
+            name: 'Tailwind CSS',
+            //class: 'bg-[#003159] text-white',
+            class: 'bg-white text-black',
+            icon: Tailwind
+        },
+        HTML: {
+            name: 'HTML',
+            class: 'bg-white text-black',
+            icon: HTML
+        },
+        CSS: {
+            name: 'CSS',
+            //class: 'bg-[#0761ab] text-white',
+            class: 'bg-white text-black',
+            icon: CSS
+        },
+        ANGULAR: {
+            name: 'Angular',
+            class: 'bg-white text-black',
+            icon: Angular
+        },
+        TYPESCRIPT: {
+            name: 'TypeScript',
+            class: 'bg-white text-black',
+            icon: TypeScript
+        },
+        SPRING: {
+            name: 'SpringBoot',
+            class: 'bg-white text-black',
+            icon: Spring
+        },
+        MONGO: {
+            name: 'MongoDB',
+            class: 'bg-white text-black',
+            icon: Mongo
+        }
+
+    }
+
+    const projects = [
+        {
+            title: 'Viaparc - App',
+            description: 'Intranet de la hoguera Via Parc Vistahermosa',
+            link: 'https://viaparc.web.app/privateHome',
+            github: '#',
+            image: ViaparcApp,
+            tags: [TAGS.HTML, TAGS.CSS, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.TAILWIND, TAGS.SPRING, TAGS.MONGO]
+        }
+    ]
+---
+
+{
+    projects.map(project => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{project.title}</h3>
+            <p class="text-lg mb-4 text-pretty">{project.description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2">
+                {
+                    project.tags.map(tag => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                                <tag.icon class="size-4"/>
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+            <img src={project.image.src} alt={project.title} class="rounded shadow-2xl shadow-white/10"/>
+        </article>
+    ))
+}

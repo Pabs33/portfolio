@@ -1,0 +1,171 @@
+---
+import Angular from "../icons/Angular.astro";
+import HTML from "../icons/HTML.astro";
+import Mongo from "../icons/Mongo.astro";
+import Spring from "../icons/Spring.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import CSS from "../icons/CSS.astro";
+import MySQL from "../icons/MySQL.astro";
+import Java from "../icons/Java.astro";
+import Node from "../icons/Node.astro";
+import JMeter from "../icons/JMeter.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import Selenium from "../icons/Selenium.astro";
+import Postgress from "../icons/Postgress.astro";
+import Postman from "../icons/Postman.astro";
+import LR from "../icons/LR.astro";
+import SOAPUI from "../icons/SOAPUI.astro";
+import Git from "../icons/Git.astro";
+import GitHub from "../icons/GitHub.astro";
+import Bash from "../icons/Bash.astro";
+import Jira from "../icons/Jira.astro";
+
+    const TAGS = {
+        TAILWIND: {
+            name: 'Tailwind CSS',
+            class: 'bg-white text-black',
+            icon: Tailwind
+        },
+        HTML: {
+            name: 'HTML',
+            icon: HTML
+        },
+        CSS: {
+            name: 'CSS',
+            icon: CSS
+        },
+        ANGULAR: {
+            name: 'Angular',
+            icon: Angular
+        },
+        TYPESCRIPT: {
+            name: 'TypeScript',
+            icon: TypeScript
+        },
+        SPRING: {
+            name: 'SpringBoot',
+            icon: Spring
+        },
+        MONGO: {
+            name: 'MongoDB',
+            icon: Mongo
+        },
+        MYSQL:{
+            name: 'MySQL',
+            icon: MySQL
+        },
+        JAVA:{
+            name: 'Java',
+            icon: Java
+        },
+        NODE: {
+            name: 'NodeJs',
+            icon: Node
+        },
+        JMETER: {
+            name: 'JMeter',
+            icon: JMeter
+        },
+        JAVASACRIPT:{
+            name: 'Javascript',
+            icon: JavaScript
+        },
+        SELENIUM: {
+            name: 'Selenium',
+            icon: Selenium
+        },
+        POSTRGRE:{
+            name: 'PostgreSQL',
+            icon: Postgress
+        },
+        POSTMAN: {
+            name: 'Postman',
+            icon: Postman
+        },
+        LR:{
+            name: 'LoadRunner',
+            icon: LR
+        },
+        SOAP: {
+            name: 'SoapUI',
+            icon: SOAPUI
+        },
+        GIT:{
+            name: 'Git',
+            icon: Git
+        },
+        GITHUB: {
+            name: 'GitHub',
+            icon: GitHub
+        },
+        TERMINAL:{
+            name: 'Terminal',
+            icon: Bash
+        },
+        JIRA: {
+            name: 'Jira',
+            icon: Jira
+        }
+    }
+
+    const BACKEND = [ TAGS.SPRING, TAGS.JAVA, TAGS.MYSQL, TAGS.POSTRGRE, TAGS.NODE, TAGS.MONGO];
+    const QA = [TAGS.JMETER, TAGS.LR, TAGS.SELENIUM, TAGS.POSTMAN, TAGS.SOAP];
+    const FRONTEND =[TAGS.HTML, TAGS.CSS, TAGS.JAVASACRIPT, TAGS.ANGULAR, TAGS.TAILWIND, TAGS.TYPESCRIPT];
+    const HERRAMIENTAS = [TAGS.GIT, TAGS.GITHUB, TAGS.JIRA, TAGS.TERMINAL];
+---
+
+<div class="grid grid-cols-2 gap-4">
+    <article class="border rounded border-gray-800">
+        <h2 class="text-xl text-center mb-2 font-semibold">Backend</h2>
+        <div class="grid grid-cols-3">
+            {
+                BACKEND.map(item => (
+                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-sm py-1 px-2 size-28 text-center`}>
+                                <item.icon class="size-20 mb-2"/>
+                                {item.name}
+                            </span>
+                ))
+            }
+        </div>
+    </article>
+    <article class="border rounded border-gray-800 font-semibold">
+        <h2 class="text-xl text-center mb-2">QA</h2>
+        <div class="grid grid-cols-3">
+            {
+                QA.map(item => (
+                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-sm py-1 px-2 size-28 text-center`}>
+                                <item.icon class="size-20 mb-2"/>
+                                {item.name}
+                            </span>
+                ))
+            }
+        </div>
+    </article>
+    <article class="border rounded border-gray-800 font-semibold">
+        <h2 class="text-xl text-center mb-2">Frontend</h2>
+        <div class="grid grid-cols-3">
+            {
+                FRONTEND.map(item => (
+                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-sm py-1 px-2 size-28 text-center`}>
+                                <item.icon class="size-20 mb-2"/>
+                                {item.name}
+                            </span>
+                ))
+            }
+        </div>
+    </article>
+    <article class="border rounded border-gray-800 font-semibold">
+        <h2 class="text-xl text-center mb-2">Herramientas</h2>
+        <div class="grid grid-cols-3">
+            {
+                HERRAMIENTAS.map(item => (
+                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-sm py-1 px-2 size-28 text-center`}>
+                                <item.icon class="size-20 mb-2"/>
+                                {item.name}
+                            </span>
+                ))
+            }
+        </div>
+    </article>
+</div>

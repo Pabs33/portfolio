@@ -1,14 +1,22 @@
 ---
 
     import ViaparcApp from '../img/ViaparcApp.webp'
+    import MagicPabsApp from '../img/MagicPabsApp.jpg'
+    import LoteriaScraping from '../img/LoteriaScraping.jpg'
     import Tailwind from '../icons/Tailwind.astro'
     import HTML from '../icons/HTML.astro'
     import CSS from '../icons/CSS.astro'
     import Angular from '../icons/Angular.astro'
     import TypeScript from '../icons/TypeScript.astro'
-import Spring from '../icons/Spring.astro'
-import Mongo from '../icons/Mongo.astro'
-import SocialPill from './SocialPill.astro'
+    import Spring from '../icons/Spring.astro'
+    import Mongo from '../icons/Mongo.astro'
+    import SocialPill from './SocialPill.astro'
+    import Java from '../icons/Java.astro'
+    import MySQL from '../icons/MySQL.astro'
+    import CSharp from '../icons/CSharp.astro'
+    import Android from '../icons/Android.astro'
+    import Selenium from '../icons/Selenium.astro'
+    import Python from '../icons/Python.astro'
 
     const TAGS = {
         TAILWIND: {
@@ -47,8 +55,37 @@ import SocialPill from './SocialPill.astro'
             name: 'MongoDB',
             class: 'bg-white text-black',
             icon: Mongo
+        },
+        JAVA:{
+            name: 'Java',
+            class: 'bg-white text-black',
+            icon: Java
+        },
+        MYSQL:{
+            name: 'MySQL',
+            class: 'bg-white text-black',
+            icon: MySQL
+        },
+        CSHARP:{
+            name: 'C#',
+            class: 'bg-white text-black',
+            icon: CSharp
+        },
+        ANDROID:{
+            name: 'Android Studio',
+            class: 'bg-white text-black',
+            icon: Android
+        },
+        SELENIUM:{
+            name: 'Selenium',
+            class: 'bg-white text-black',
+            icon: Selenium
+        },
+        PYTHON:{
+            name: 'Python',
+            class: 'bg-white text-black',
+            icon: Python
         }
-
     }
 
     const projects = [
@@ -56,9 +93,25 @@ import SocialPill from './SocialPill.astro'
             title: 'Viaparc - App',
             description: 'Intranet de la hoguera Via Parc Vistahermosa. Suite de aplicaciones para la gestion de una comisión de fiestas de Alicante.',
             link: 'https://viaparc.web.app',
-            github: '#',
+            github: '',
             image: ViaparcApp,
             tags: [TAGS.HTML, TAGS.CSS, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.TAILWIND, TAGS.SPRING, TAGS.MONGO]
+        },
+        {
+            title: 'Magic Pabs App',
+            description: 'Trabajo final del grado de Desarrollo de Aplicaciones Multiplataforma. Una aplicación de escritorio y una aplicación para Android desde la cual gestionar espectáculos de Magia.',
+            link: '',
+            github: 'https://github.com/Pabs33/Magic-Pabs-App',
+            image: MagicPabsApp,
+            tags: [TAGS.JAVA, TAGS.MYSQL, TAGS.CSHARP, TAGS.ANDROID]
+        },
+        {
+            title: 'Scraping Loteria',
+            description: 'Aplicacion de python de CLI para automatizar la obtencion del resultado de 2 numeros de la loteria nacional.',
+            link: '',
+            github: 'https://github.com/Pabs33/ScrapingLoteria',
+            image: LoteriaScraping,
+            tags: [TAGS.PYTHON, TAGS.SELENIUM]
         }
     ]
 ---
@@ -66,15 +119,24 @@ import SocialPill from './SocialPill.astro'
 {
     projects.map(project => (
         <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{project.title}</h3>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 mt-2">{project.title}</h3>
             <p class="text-lg mb-4 text-pretty">{project.description}</p>
-            {project.link && (
-                <nav class="flex gap-4 mt-6 flex-wrap mb-6">
-                    <SocialPill href={project.link}>
-                        Visita la applicacion
-                    </SocialPill>
-                </nav>
-            )}
+            <div class="flex flex-row gap-3">
+                {project.link && (
+                    <nav class="flex gap-4 mt-6 flex-wrap mb-6">
+                        <SocialPill href={project.link}>
+                            Visita la applicacion
+                        </SocialPill>
+                    </nav>
+                )}
+                {project.github && (
+                    <nav class="flex gap-4 mt-6 flex-wrap mb-6">
+                        <SocialPill href={project.github}>
+                            Visita el repositorio
+                        </SocialPill>
+                    </nav>
+                )}
+            </div>
             <ul class="flex gap-x-2 flex-row mb-2">
                 {
                     project.tags.map(tag => (

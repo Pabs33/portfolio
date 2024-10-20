@@ -118,11 +118,11 @@ import Jira from "../icons/Jira.astro";
 <div class="grid grid-cols-2 gap-4">
     <article class="border rounded border-gray-800">
         <h2 class="text-xl text-center mb-2 font-semibold">Backend</h2>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
             {
                 BACKEND.map(item => (
-                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-sm py-1 px-2 size-28 text-center items-center`}>
-                                <item.icon class="size-20 mb-2"/>
+                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-xs sm:text-sm md:text-sm lg:text-sm py-1 px-2 size-28 text-center items-center`}>
+                                <item.icon class="w-10 h-10 sm:w-10 sm:h-10 md:w-20 md:-h-20 lg:w-20 lg:h-20 mb-2"/>
                                 {item.name}
                             </span>
                 ))
@@ -131,11 +131,11 @@ import Jira from "../icons/Jira.astro";
     </article>
     <article class="border rounded border-gray-800 font-semibold">
         <h2 class="text-xl text-center mb-2">QA</h2>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
             {
                 QA.map(item => (
-                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-sm py-1 px-2 size-28 text-center items-center`}>
-                                <item.icon class="size-20 mb-2"/>
+                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-xs sm:text-sm md:text-sm lg:text-sm py-1 px-2 size-28 text-center items-center`}>
+                                <item.icon class="w-10 h-10 sm:w-10 sm:h-10 md:w-20 md:-h-20 lg:w-20 lg:h-20 mb-2"/>
                                 {item.name}
                             </span>
                 ))
@@ -144,11 +144,11 @@ import Jira from "../icons/Jira.astro";
     </article>
     <article class="border rounded border-gray-800 font-semibold">
         <h2 class="text-xl text-center mb-2">Frontend</h2>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
             {
                 FRONTEND.map(item => (
-                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-sm py-1 px-2 size-28 text-center items-center`}>
-                                <item.icon class="size-20 mb-2"/>
+                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-xs sm:text-sm md:text-sm lg:text-sm py-1 px-2 size-28 text-center items-center`}>
+                                <item.icon class="w-10 h-10 sm:w-10 sm:h-10 md:w-20 md:-h-20 lg:w-20 lg:h-20 mb-2"/>
                                 {item.name}
                             </span>
                 ))
@@ -157,11 +157,11 @@ import Jira from "../icons/Jira.astro";
     </article>
     <article class="border rounded border-gray-800 font-semibold">
         <h2 class="text-xl text-center mb-2">Herramientas</h2>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-3 lg:grid-cols-3">
             {
                 HERRAMIENTAS.map(item => (
-                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-sm py-1 px-2 size-28 text-center items-center`}>
-                                <item.icon class="size-20 mb-2"/>
+                <span class={`flex flex-col gap-x-2 rounded-2 rounded text-xs sm:text-sm md:text-sm lg:text-sm py-1 px-2 size-28 text-center items-center`}>
+                                <item.icon class="w-10 h-10 sm:w-10 sm:h-10 md:w-20 md:-h-20 lg:w-20 lg:h-20 mb-2"/>
                                 {item.name}
                             </span>
                 ))

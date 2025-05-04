@@ -3,6 +3,7 @@
     import ViaparcApp from '../img/ViaparcApp.webp'
     import MagicPabsApp from '../img/MagicPabsApp.jpg'
     import LoteriaScraping from '../img/LoteriaScraping.jpg'
+    import EleccioBelleo from '../img/EleccioBelleo.jpg'
     import Tailwind from '../icons/Tailwind.astro'
     import HTML from '../icons/HTML.astro'
     import CSS from '../icons/CSS.astro'
@@ -17,6 +18,7 @@
     import Android from '../icons/Android.astro'
     import Selenium from '../icons/Selenium.astro'
     import Python from '../icons/Python.astro'
+    import React from '../icons/React.astro'
 
     const TAGS = {
         TAILWIND: {
@@ -85,6 +87,11 @@
             name: 'Python',
             class: 'bg-white text-black',
             icon: Python
+        },
+        REACT:{
+            name: 'React',
+            class: 'bg-white text-black',
+            icon: React
         }
     }
 
@@ -112,6 +119,14 @@
             github: 'https://github.com/Pabs33/ScrapingLoteria',
             image: LoteriaScraping,
             tags: [TAGS.PYTHON, TAGS.SELENIUM]
+        },
+        {
+            title: 'Elecció Belleo',
+            description: 'Aplicación web para la gestión de la elección del Belleo de la federación de fogueres del sector norte de Alicante.',
+            link: 'https://elecciobelleo.vercel.app/',
+            github: '',
+            image: EleccioBelleo,
+            tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.TAILWIND]
         }
     ]
 ---
